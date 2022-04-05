@@ -1,0 +1,369 @@
+/* POUR TOUTE LA PAGE */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Patrick Hand', sans-serif;
+    color: var(--noir);
+    scroll-behavior: smooth;
+    /* VARIABLES */
+    --noir:         hsl(0, 0%, 0%);
+    --blanc:        hsla(0, 0%, 100%);
+    --blanc2:        hsla(0, 0%, 100%,55%);
+    --gris-fonce:   hsl(0, 0%, 50%);
+    --gris-clair:   hsl(0, 0%, 80%);
+    --bleu-fonce:   hsl(204, 90%, 40%);
+    --bleu-theme:   hsl(211, 100%, 85%);
+    --bleu-clair:   hsl(204, 90%, 75%);
+    --vert-fonce:   hsl(175, 90%, 40%);
+    --vert-theme:   hsl(175, 90%, 65%);
+   /* --vert-clair:   hsl(175, 90%, 75%);*/
+    --vert-theme:   hsl(82,40.4%,55.9%);
+
+    --gradient-clair:   linear-gradient(to bottom right, var(--bleu-clair), var(--vert-clair));
+    --gradient-theme:   linear-gradient(to bottom right, var(--noir), var(--noir));
+    --gradient-fonce:   linear-gradient(to bottom right, var(--bleu-fonce), var(--vert-fonce));
+    --noir-transparent-low:     hsla(0, 0%, 0%, 40%);
+    --noir-transparent-high:    hsla(0, 0%, 0%, 75%);
+    --blanc-transperent-high:   hsla(0, 0%, 100%, 40%);
+    --blanc-transparent-low:    hsla(0, 0%, 100%, 75%);
+}
+
+html, body
+{
+    /*background-image: url('../images/fond.png');
+    background-size: 100%;*/
+    background-color: var(--bleu-theme);
+    padding-bottom: 32px;
+}
+
+/* ENLÈVE TOUTES DÉCORATIONS PAR LE NAVIGATEUR */
+a:link, a:visited
+{
+    text-decoration: none;
+}
+
+/* TITRES ET TAILLES DE POLICE */
+h1
+{
+    font-size: 32px;
+    font-weight: 700;
+}
+h2
+{
+    font-size: 32px;
+    font-weight: 700;
+}
+h3
+{
+    font-size: 24px;
+    font-weight: 500;
+}
+h4
+{
+    font-size: 18px;
+    font-weight: 500;
+}
+p
+{
+    font-size: 20px;
+    font-weight: 300;
+}
+br
+{
+    content: " ";
+    width: 75vw;
+    border-top: solid 2px var(--vert-theme);
+}
+
+/* PARTIE HAUTE DE LA PAGE : HEADER */
+header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    background: var(--blanc2);
+    color: var(--noir);
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+/* TITRE HEADER */
+header h2
+{
+    padding-left: 1em;
+}
+/* Non affichage du texte*/
+h2.nope
+{
+    display: none;
+}
+
+/* TEXTE TITRE HAUT DE PAGE */
+h1#Titre
+{
+    padding: 0.75em;
+    text-align: center;
+}
+
+/* MENU DE NAVIGATION */
+.nav
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* LIENS DE NAVIGATION */
+.nav a:link, .nav a:visited
+{
+    font-size: 12px;
+    padding: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-right: solid 1px var(--vert-theme);
+}
+.nav a:hover, a:active
+{
+    color: var(--vert-theme);
+}
+
+/* PAGE CENTRALE */
+.page
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+}
+
+/* LES ARTICLES SONT À L'HORIZONTAL */
+article
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+    margin-top: 0;
+    gap: 2em;
+    width: 96%;
+}
+
+
+/* LES ASIDES SONT LES PARTIES VERTICALES DANS ARTICLE */
+aside
+{
+    text-align: justify;
+    margin-top: 1em;
+}
+
+
+/* FOOTER DE LA PAGE, LES CONTACTS SONT DANS LE DIV CONTACTS */
+footer
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    text-align: center;
+    border-top: solid 2px var(--vert-theme);
+    background: var(--blanc2);
+    padding: 0.5em;
+    width: 100vw;
+    bottom: 0;
+}
+/* LES LIENS CONTACTS SONT EN 2 PARTIES : L'IMAGE PUIS LE TEXTE */
+footer a
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Bouton revenir en haut */
+a#backtotop
+{
+
+    margin: 1em;
+    position: fixed;
+    bottom: 2em;
+    right: 0;
+    background: var(--vert-theme);
+    border: solid 2px var(--blanc) ;
+
+}
+
+/* BOUTON C'EST PARTI */
+.start
+{
+    margin-top: 1em;
+}
+a:link.bouton-start, a:visited.bouton-start
+{
+    padding: 0.5em;
+    background: var(--blanc2);
+    border: solid 2px var(--blanc) ;
+}
+a:hover.bouton-start, active.bouton-start
+{
+    background: var(--noir);
+    color: var(--blanc);
+}
+
+/*texte*/
+
+.texte-bienvenue
+{
+    color: var(--noir);
+    background: var(--blanc2);
+    padding: 1em;
+}
+
+/*texte sur les cotes*/
+.texte-aside
+{
+    color: var(--noir);
+    background: var(--blanc2);
+    padding: 1em;
+    width: 40%;
+}
+
+/* CONTACTS */
+article.contact aside
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+article.contact aside a
+{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+article.contact aside a img
+{
+    width: 24px;
+    height: 24px;
+}
+
+article.ville
+{
+    display: flex;
+    flex-direction: row ;
+}
+
+article.ville aside
+{
+    background-color: var(--blanc2);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    height: 220px;
+    width: auto;
+}
+
+article.autors
+{
+    display: contents;
+}
+
+article.autors aside
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* RESAUX SOCIAUX */
+aside.resaux-sociaux > *
+{
+    margin: 1em;
+}
+aside.resaux-sociaux a
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* IMAGES SUR LES COTES*/
+.img-aside
+{
+    display: flex;
+    min-width: 128px;
+    max-width: 100%;
+    width: 50vw;
+    min-height: 72px;
+}
+
+/* PREMIERE IMAGE*/
+.img-bienvenue
+{
+    min-width: 128px;
+    max-width: 900px;
+    width: 50vw;
+    min-height: 72px;
+    max-height: 510px;
+}
+
+img.icone
+{
+    width: 1em;
+    height: auto;
+}
+
+.flexbox-vertical
+{
+    display: flex;
+    flex-direction: column;
+}
+/*ADAPTER LA LARGEUR A L'ECRAN*/
+.flex-full
+{
+    width: 100%;
+    height: auto;
+}
+
+/* POUR LES ÉCRANS PLUS PETITS, METS LA PAGE EN VERTICAL */
+@media screen and (max-width: 740px) {
+    header
+    {
+        flex-direction: column;
+    }
+    html, body
+    {
+        background-image: url('../images/fondtel2.png');
+    }
+    article
+    {
+        flex-direction: column;
+    }
+    .texte-aside
+    {
+        width: 100%;
+    }
+    .img-aside
+    {
+        width: 100%;
+    }
+    article.ville
+    {
+        flex-direction: column;
+    }
+    article.ville aside
+    {
+        width: 220px;
+        height: auto;
+    }
+}
